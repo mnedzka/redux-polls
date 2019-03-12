@@ -3,13 +3,13 @@ import { receiveUsers } from './users';
 import { receivePolls } from './polls';
 import { setAuthedUser } from './authedUser';
 
-const AUTHED_ID = 'dan_abramov';
+const AUTHED_ID = 'tylermcginnis';
 
 export function handleInitialData() {
   return dispatch => {
     return getInitialData().then(({ users, polls }) => {
-      dispatch(receivePolls(polls));
       dispatch(receiveUsers(users));
+      dispatch(receivePolls(polls));
       dispatch(setAuthedUser(AUTHED_ID));
     });
   };
