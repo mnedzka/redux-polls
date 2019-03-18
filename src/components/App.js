@@ -18,7 +18,7 @@ class App extends Component {
     return (
       <div>
         <LoadingBar />
-        {loading === true ? null : <Poll />}
+        {loading === true ? null : <Poll match={{ params: { id: 'xj352vofupe1dqz9emx13r' } }} />}
       </div>
     );
   }
